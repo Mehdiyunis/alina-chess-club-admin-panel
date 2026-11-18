@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F7F3EA;
+  --color-bg-alt: #EFE9DB;
+  --color-surface: #FFFFFF;
+  --color-border: #E3DCCB;
+  --color-ink: #1E2A22;
+  --color-ink-muted: #5E6B62;
+  --color-primary: #2F5D46;
+  --color-primary-hover: #254B38;
+  --color-on-primary: #F7F3EA;
+  --color-sage-100: #E4EBD9;
+  --color-sage-200: #DCE6D0;
+  --color-butter: #F6E7B4;
+  --color-peach: #F4D9C6;
+  --color-terracotta: #D9774A;
+  --color-terracotta-text: #B4532A;
+  --color-dark: #1F3D2F;
+  --color-on-dark: #F7F3EA;
+  --color-on-dark-muted: #C9D3C4;
+  --color-board-light: #EEEED2;
+  --color-board-dark: #769656;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #F7F3EA;
+  --bg-alt: #EFE9DB;
+  --surface: #FFFFFF;
+  --border: #E3DCCB;
+  --ink: #1E2A22;
+  --ink-muted: #5E6B62;
+  --primary: #2F5D46;
+  --primary-hover: #254B38;
+  --on-primary: #F7F3EA;
+  --sage-100: #E4EBD9;
+  --sage-200: #DCE6D0;
+  --butter: #F6E7B4;
+  --peach: #F4D9C6;
+  --terracotta: #D9774A;
+  --terracotta-text: #B4532A;
+  --dark: #1F3D2F;
+  --on-dark: #F7F3EA;
+  --on-dark-muted: #C9D3C4;
+  --board-light: #EEEED2;
+  --board-dark: #769656;
+
+  --bg-page-dark: #1F3D2F;
+  --bg-page-cream: var(--bg);
+  --surface-dark: #1F3D2F;
+  --surface-cream: var(--surface);
+  --accent-sand: var(--primary);
+  --accent-sand-hover: var(--primary-hover);
+  --text-dark-theme: #F7F3EA;
+  --text-dark-muted: #C9D3C4;
+  --brand-dark: #1F3D2F;
+  --brand-accent: #2F5D46;
+  --brand-accent-soft: #E4EBD9;
+  --brand-cream: #F7F3EA;
+  --brand-paper: #FFFFFF;
+  --brand-border: #E3DCCB;
+  --brand-ink: #1E2A22;
+  --brand-muted: #5E6B62;
+  --text-cream-theme: var(--ink);
+  --text-cream-muted: var(--ink-muted);
+  --divider-dark: rgba(247, 243, 234, 0.16);
+  --divider-cream: var(--border);
+
+  --status-success: #2F5D46;
+  --status-warning: #9A6B13;
+  --status-danger: #B3261E;
+  --status-info: #45627A;
+}
+
+.font-serif-heading {
+  font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  color: var(--ink);
+  font-family: var(--font-serif), 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.font-serif-heading {
+  font-family: var(--font-serif), 'Playfair Display', Georgia, serif;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, a, input, select, textarea {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::selection {
+  background: var(--sage-200);
+  color: var(--ink);
+}
+
+/* Custom Scrollbar for dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9D3C4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Focus visible styling */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
